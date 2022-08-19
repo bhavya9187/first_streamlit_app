@@ -72,9 +72,6 @@ my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
-
-
-
 streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
     with my_cnx.cur() as my_cur:
