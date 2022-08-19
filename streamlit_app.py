@@ -44,6 +44,8 @@ def get_fruityvice_data(this_fruit_choice):
      return fruityvice_normalized 
       
        #streamlit.write('The user entered ', fruit_choice)
+          
+          
 streamlit.header('Fruityvice Fruit Advice!')
 try:
    fruit_choice = streamlit.text_input('What fruit would you like information about?')
@@ -59,9 +61,9 @@ except URLError as e:
 
 
 # write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized)
+# streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
+# streamlit.stop()
 
 
 # my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
