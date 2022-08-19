@@ -80,7 +80,7 @@ def get_fruit_load_list():
          return my_data_rows = get_fruit_load_list()
 if streamlit.button('Get Fruit Load List')
    my_data_rows = get_fruit_load_list()
-   streamlit.dataframe(my_data_row)
+   streamlit.dataframe(my_data_rows)
 
 
 
