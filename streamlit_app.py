@@ -66,25 +66,25 @@ streamlit.dataframe(fruityvice_normalized)
 # streamlit.stop()
 
 
-# my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-# my_cur = my_cnx.cursor()
-# my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 
 # streamlit.text("Hello from Snowflake:")
 # streamlit.text(my_data_row)
 
-streamlit.header("The fruit load list contains:")
-def get_fruit_load_list():
-    with my_cnx.cur() as my_cur:
-         my_cur.execute("SELECT * FROM fruit_load_list")
-         return my_cur.fetchall()
+# streamlit.header("The fruit load list contains:")
+# def get_fruit_load_list():
+#     with my_cnx.cur() as my_cur:
+#          my_cur.execute("SELECT * FROM fruit_load_list")
+#          return my_cur.fetchall()
 
 # if streamlit.button('Get Fruit Load List'):
 #     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #     my_data_row = get_fruit_load_list()
 #     streamlit.dataframe(my_data_row)
 
-streamlit.write('The user entered ', add_my_fruit)
+# streamlit.write('The user entered ', add_my_fruit)
 
 # def insert_row_snowflake(new_fruit):
 #     with my_cnx.cursor() as my_cur:
