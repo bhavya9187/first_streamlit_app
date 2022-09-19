@@ -47,3 +47,4 @@ if st.button("Add a fruit to list"):
    my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
    bck_from_connector = insert_row_snowflake(add_user_choice)
    st.text(bck_from_connector)
+   
